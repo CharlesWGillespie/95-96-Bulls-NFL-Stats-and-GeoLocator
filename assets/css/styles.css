@@ -41,19 +41,34 @@ h1{
   margin-bottom: 20px
 }
 .upcoming-game-section{
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: var(--color30);
-  width: 90%;
+  width: 80%;
   margin: auto;
   padding: 10px;
   border-radius: 5px;
 }
 .team-card{
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  border-radius: 5px; 
 }
 .team-card img{
-  width: 120px;
-  border-radius: 5px;
+  width: 55%;
+  margin: auto;
+}
+.team-card p{
+  width: 100%;
+  text-align: center;
+}
+.upcoming-game-details{
+  text-align: center;
+  width: 100%;
+}
+.next-stadium{
+  text-align: center;
+  width: 100%
 }
