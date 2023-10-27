@@ -10,38 +10,41 @@
 </head>
 
 <body>
-  <nav>
-    <ul class="navBarOptions">
-      <li><a>Teams</a></li>
-      <li><a>Home</a></li>
-      <li><a>Stadiums</a></li>
-    </ul>
-  </nav>
-  <section>
-    <h1></h1>
-  </section>
+  <header>
+    <nav>
+      <ul class="navBarOptions">
+        <li><a>Teams</a></li>
+        <li><a>Home</a></li>
+        <li><a>Stadiums</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section>
-    <div>
-      <img src="https://a.espncdn.com/i/teamlogos/nfl/500/ari.png" alt="">
-      <p>Home Team</p>
-    </div>
-    <div>
+  <main>
+    <h1>Upcoming game</h1>
+
+    <section class="upcoming-game-section">
+      <div class="team-card">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/ari.png" alt="">
+        <p>Home Team</p>
+      </div>
       <div>
         <div>
-          <p> Team record 4-6</p>
-          <p>Team record 5-3</p>
-        </div>
-        <div>
-          <p>Stadium Location</p>
+          <div class="team-records">
+            <p> Team record 4-6</p>
+            <p>Team record 5-3</p>
+          </div>
+          <div>
+            <p>Stadium Location</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="">
-      <p>Away Team</p>
-    </div>
-  </section>
+      <div class="team-card">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="">
+        <p>Away Team</p>
+      </div>
+    </section>
+  </main>
 
   <script src="./assets/js/main.js"></script>
 </body>

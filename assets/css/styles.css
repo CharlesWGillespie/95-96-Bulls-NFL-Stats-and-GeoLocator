@@ -10,7 +10,9 @@ body {
   background-color: var(--color60);
   height: 100vh;
 }
-
+header{
+  margin-bottom: 100px
+}
 .navBarOptions{
   display: flex;
   flex-wrap: wrap;
@@ -31,4 +33,27 @@ body {
   border-bottom: 0;
   scale: 120%;
   color: var(--color10);
+}
+h1{
+  text-align: center;
+  width:fit-content;
+  margin: auto;
+  margin-bottom: 20px
+}
+.upcoming-game-section{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color30);
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+.team-card{
+}
+.team-card img{
+  width: 120px;
+  border-radius: 5px;
 }
