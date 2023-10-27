@@ -43,7 +43,7 @@ h1{
 .upcoming-game-section{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--color30);
   width: 80%;
   margin: auto;
