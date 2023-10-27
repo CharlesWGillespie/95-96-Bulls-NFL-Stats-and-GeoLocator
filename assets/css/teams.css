@@ -53,10 +53,11 @@ main {
 }
 
 .head-to-head-container {
+   flex-direction: row; 
   display: flex;
   justify-content: space-around;
   height: 400px;
-  width: 66%;
+  width: 60%;
   margin: 50px;
   border: 1px solid var(--color10);
 }
@@ -88,4 +89,9 @@ main {
     margin-top: 100px;
     margin-left: 530px;
     font-size: 30px;
+ }
+
+ .starting-roster-container{
+    border: 1px solid var(--color10);
+    height: 400px;
  }
