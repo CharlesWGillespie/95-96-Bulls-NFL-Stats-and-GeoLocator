@@ -4,6 +4,10 @@
   --color10: rgb(234 88 12);
   --textColor: rgb(209 213 219);
   --transition: all 150ms linear;
+  --margin-bottom: 10px;
+  --padding: 10px;
+  --border-radius5: 5px;
+  --border-radius10: 10px
 }
 
 * {
@@ -18,8 +22,19 @@ body {
   transition: all 200ms linear;
 }
 
+.company-logo {
+  position: absolute;
+  left: -200px;
+  top: -200px;
+  margin: 0;
+  rotate: 45deg;
+  width: 600px;
+  z-index: -1;
+  opacity: 20%;
+}
+
 header {
-  margin-bottom: 50px
+  margin-bottom: var(--margin-bottom)
 }
 
 .navBarOptions {
@@ -28,15 +43,15 @@ header {
   justify-content: center;
   flex: 1 0 200;
   margin: auto;
-  padding: 20px;
-  margin-top: 20px;
+  padding: var(--padding);
+  margin-top: var(--margin-bottom);
   /* width: 80% */
 }
 
 .navBarOptions li {
   font-size: 1.5em;
   margin: 0 .5em 0 .5em;
-  padding: .2em;
+  padding: var(--padding);
   border-bottom: 1.5px var(--textColor) solid;
   /* transition: all 150ms ease-out; */
 }
@@ -50,10 +65,13 @@ header {
 }
 
 h1 {
+  text-decoration: underline black;
+
+  font-size: 30px;
   text-align: center;
   width: fit-content;
   margin: auto;
-  margin-bottom: 20px
+  margin-bottom: var(--margin-bottom)
 }
 
 .upcoming-game-section {
@@ -63,13 +81,13 @@ h1 {
   background-color: var(--color30);
   width: 80%;
   margin: auto;
-  padding: 20px;
+  padding: var(--padding);
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom);
 }
 
-.upcoming-game-section>.team-card:nth-child(1) {
-  margin-bottom: 20px;
+.upcoming-game-section>.team-card:nth-child(2) {
+  margin-bottom: var(--margin-bottom);
 }
 
 .team-card {
@@ -83,7 +101,7 @@ h1 {
   font-size: 26px;
   /* border-top: 4px solid var(--color10); */
   border-bottom: 4px solid var(--color10);
-  /* margin-bottom: 20px; */
+  /* margin-bottom: var(--margin-bottom); */
 }
 
 .team-card img {
@@ -120,7 +138,7 @@ h1 {
 }
 
 .team-card .team-name {
-  padding: 5px;
+  padding: var(--padding);
   width: 100%;
   margin: auto;
   border-radius: 5px;
@@ -128,7 +146,7 @@ h1 {
 }
 
 .team-card .team-record {
-  padding: 10px;
+  padding: var(--padding);
   border-radius: 5px;
 }
 
@@ -144,7 +162,7 @@ h1 {
   font-size: 20px;
   /* border-top: 4px solid var(--color10); */
   border-bottom: 4px solid var(--color10);
-  margin-top: 20px;
+  margin-top: var(--margin-bottom);
 }
 
 .event-details>p {
@@ -153,10 +171,10 @@ h1 {
   /* margin-top: 10px; */
   color: var(--textColor);
   border-radius: 5%;
-  padding: 15px;
+  padding: var(--padding);
 }
 
-body>main>section>div.event-details>p.detail-label {
+body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   color: var(--textColor);
   padding: 0;
   margin: 0;
@@ -173,40 +191,89 @@ body>main>section>div.event-details>p.detail-label {
   text-shadow: var(--color10) 2px 2px;
 }
 
-.team-list {
+.news-section{
+  border: 2px solid var(--color30);
+  width: 80%;
+  margin: auto;
+  margin-bottom: var(--margin-bottom);
+  padding: var(--padding);
+  border-radius: var(--border-radius5);
+}
+.news-section div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: var(--margin-bottom);
+  /* background-color: var(--color30); */
+  padding: var(--padding);
+  border-radius: 5px;
+  margin-bottom: calc(var(--margin) + 10px);
+  text-align: center;
+}
+.news-section h2 {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline black
+}
+
+.news-section h3 {
+  width: 80%;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 23px;
+  word-spacing: -.5px;
+  margin: 0;
+  word-break: keep-all;
+}
+.news-section p{
+  margin: 0;
+  padding: var(--padding);
+  line-height: 30px;
+}
+.news-section a{
+  color: var(--color10);
+  cursor: pointer;
+  /* margin-bottom: var(--margin-bottom); */
+}
+
+.team-list-section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
   background-color: var(--color30);
   width: 80%;
-  padding: 20px;
+  padding: var(--padding);
   border-radius: 5px;
   margin: auto;
 }
 
-.team-list div {
+.team-list-section h2 {
+  text-decoration: underline black ;
+  
+  font-size: 30px;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: var(--margin-bottom)
+}
+
+.team-list-section div {
   width: 100%;
   border-radius: 5px;
   text-align: center;
-  padding: 10px;
+  padding: var(--padding);
   background-color: var(--color60);
-  margin-bottom: 5px
+  margin-bottom: var(--margin-bottom)
 }
 
-.team-list div img {
+.team-list-section div img {
   width: 40%;
 }
 
-.team-list div h3 {
+.team-list-section div h3 {
   margin: 0;
-}
-
-@media (min-width: 1024px) {
-  body {
-    max-width: 1240px;
-    margin: auto;
-  }
 }
 
 @media (min-width: 700px) {
@@ -218,12 +285,56 @@ body>main>section>div.event-details>p.detail-label {
     justify-content: space-between;
   }
 
+  h1 {
+    width: 100%
+  }
+
+  .team-list-section h2 {
+    width: 100%
+  }
+
   .team-card {
     width: 49%;
     height: fit-content;
   }
 
-  .team-list div {
+  .team-list-section div {
     width: 46%
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 1240px;
+    margin: auto;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  main section:first-of-type {
+    width: 60%
+  }
+
+  .upcoming-game-section {
+    align-content: start;
+    width: 100%;
+    margin: 0;
+    height: fit-content
+  }
+  .news-section{
+    width: 100%;
+  }
+
+  .team-list-section {
+    width: 20%;
+    margin: 0;
+  }
+
+  .team-list-section div {
+    width: 100%
   }
 }
