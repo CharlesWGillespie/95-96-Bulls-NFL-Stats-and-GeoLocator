@@ -195,8 +195,8 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   border: 2px solid var(--color30);
   width: 80%;
   margin: auto;
-  margin-bottom: var(--margin-bottom);
-  padding: var(--padding);
+  /* margin-bottom: var(--margin-bottom); */
+  padding: calc(var(--padding) - 2px);
   border-radius: var(--border-radius5);
 }
 .news-section div {
@@ -247,15 +247,17 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   padding: var(--padding);
   border-radius: 5px;
   margin: auto;
+  align-content: start;
+  height: fit-content
 }
 
 .team-list-section h2 {
   text-decoration: underline black ;
-  
   font-size: 30px;
   text-align: center;
   width: fit-content;
-  margin: auto;
+  margin: 0;
+  height: fit-content;
   margin-bottom: var(--margin-bottom)
 }
 
@@ -330,11 +332,11 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   }
 
   .team-list-section {
-    width: 20%;
+    width: 30%;
     margin: 0;
   }
 
   .team-list-section div {
-    width: 100%
+    width: 43%
   }
 }

@@ -28,7 +28,7 @@ async function getTeams() {
   data.sports[0].leagues[0].teams.forEach(team => {
     const teamDiv = document.createElement('div')
     const teamLogo = document.createElement('img')
-    const teamName = document.createElement('h2')
+    const teamName = document.createElement('h3')
     teamLogo.setAttribute('src', team.team.logos[0].href)
     teamDiv.appendChild(teamLogo)
     teamName.textContent = team.team.name
