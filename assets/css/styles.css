@@ -173,6 +173,14 @@ h1 {
   border-radius: 5%;
   padding: var(--padding);
 }
+.event-details a{
+  cursor: pointer;
+  width: 100%;
+  color: var(--textColor);
+  padding: var(--padding);
+  width: 50%;
+  margin: auto;
+}
 
 body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   color: var(--textColor);
