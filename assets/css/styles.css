@@ -64,12 +64,23 @@ header {
   color: var(--color10);
 }
 
+.navigation-button{
+  border: 0;
+  outline: 0;
+  background-color: var(--color10);
+  height: fit-content;
+  color: var(--textColor);
+  margin: auto 0;
+  padding: var(--padding);
+  border-radius: var(--border-radius10);
+  cursor: pointer;
+}
+
 h1 {
   text-decoration: underline black;
-
   font-size: 30px;
   text-align: center;
-  width: fit-content;
+  width: 50%;
   margin: auto;
   margin-bottom: var(--margin-bottom)
 }
@@ -86,7 +97,7 @@ h1 {
   margin-bottom: var(--margin-bottom);
 }
 
-.upcoming-game-section>.team-card:nth-child(2) {
+.upcoming-game-section>.team-card:nth-child(4) {
   margin-bottom: var(--margin-bottom);
 }
 
@@ -296,7 +307,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   }
 
   h1 {
-    width: 100%
+    /* width: 100% */
   }
 
   .team-list-section h2 {
