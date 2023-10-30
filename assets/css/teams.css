@@ -19,6 +19,7 @@ main {
 }
 
 main h1 {
+  margin: 20px;
   text-align: center;
   font-size: 100px;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
@@ -140,6 +141,13 @@ main h2 {
   max-height: 100%;
 }
 
+.inner-outer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .head-to-head-container {
   display: flex;
   justify-content: center;
@@ -206,11 +214,12 @@ main h2 {
 
 .starting-roster-container {
   margin: 4px;
-  max-height: 100%;
   text-align: center;
+  min-width: 370px;
+  height: 400px;
+  max-height: 100%;
   border: 5px solid var(--color10);
   border-radius: 30px;
-  height: 400px;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -227,3 +236,4 @@ main h2 {
 .player-roster-li {
   list-style: none;
 }
+
