@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
   <title>95-96 Bulls NFL Stats</title>
 </head>
+
 <body>
+  <img class="company-logo" src="./assets/main-logo-transparent.png" alt="">
   <header>
-    <h1>95-96-Bulls</h1>
+    <nav>
+      <ul class="navBarOptions">
+        <li><a>Teams</a></li>
+        <li><a>Home</a></li>
+        <li><a>Stadiums</a></li>
+      </ul>
+    </nav>
   </header>
-  
+
+  <main>
+    <!-- <h2 class="event-name"><span>Philadelphia Eagles</span> at <span>Washington Commanders</span></h2> -->
+
+    <section class="left-container">
+      <div class="upcoming-game-section">
+        <button id="prevGameBtn">Prev</button>
+        <button id="nextGameBtn">Next</button>
+        <h1>Upcoming game</h1>
+        <div class="team-card">
+          <img id="homeLogo" src="" alt="">
+          <p class="home-label">HOME</p>
+          <p id="homeName" class="team-name"></p>
+          <!-- <p id="homeRecord" class="team-record"></p> -->
+        </div>
+        <div class="team-card">
+          <img id="awayLogo" src="" alt="">
+          <p class="away-label">AWAY</p>
+          <p id="awayName" class="team-name"></p>
+          <!-- <p class="team-record"></p> -->
+        </div>
+        <div class="event-details">
+          <p id="nextEventDateAndTime"></p>
+          <p class="detail-label">DETAILS</p>
+          <p id="nextStadium"></p>
+          <p id="nextForecast"></p>
+          <a target="_blank" id="gameLink"></a>
+        </div>
+      </div>
+
+      <div class="news-section" id="newsSection">
+        <h2>League News</h2>
+      </div>
+    </section>
+
+    <aside class="team-list-section" id="teamSection">
+      <h2 class="teams-list-header">Teams</h2>
+    </aside>
+
+
+  </main>
+
+  <script src="./assets/js/homepage.js"></script>
 </body>
+
 </html>
