@@ -14,37 +14,28 @@ const homeLogo = document.querySelector('#homeLogo')
 const awayName = document.querySelector('#awayName')
 const awayLogo = document.querySelector('#awayLogo')
 
-
 const eventUrl = 'https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/'
 const teamUrl = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams"
 const articleUrl = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=8'
 
 let eventIndex = 0
-let gamesPerWeek
-// async function selectNextEvent(nextEventUrl) {
-//   const response = await fetch(nextEventUrl);
-//   const data = await response.json();
 
-//   const selectedEvent = data.items[eventIndex].$ref
-//   getNextEventDetails(selectedEvent)
-// }
-// selects from a list of event from the current week
-// !Function V1, gets random single game.
-async function selectNextEvent(nextEventUrl) {
+// !CHECKED AND CONVERTED TO HTTPS
+async function getEventList(nextEventUrl) {
+
   const response = await fetch(nextEventUrl);
   const data = await response.json();
 
-  gamesPerWeek = data.items.length
   getGameIndex()
+
   const selectedEvent = data.items[eventIndex].$ref
-  getNextEventDetails(selectedEvent)
+  getNextEventDetails(`https://${selectedEvent.split('://')[1]}`)
 }
 
-// !gets the details of the selected upcoming game.
+// !CHECKED - USES HTTPS
 async function getNextEventDetails(eventUrl) {
   const response = await fetch(eventUrl);
   const data = await response.json()
-
   const dataAndTime = data.date
   nextEventDateAndTime.textContent = convertTimeAndDate(dataAndTime)
   nextStadium.textContent = data.competitions[0].venue.fullName
@@ -53,16 +44,18 @@ async function getNextEventDetails(eventUrl) {
   } catch {
     nextForecast.textContent = 'Weather not available'
   }
-  console.log(data)
   gameLink.textContent = 'Click for more details'
+  // !CHECKED - USES HTTPS
   gameLink.setAttribute('href', data.links[0].href)
 
   const homeTeamUrl = data.competitions[0].competitors[0].team.$ref
   const awayTeamUrl = data.competitions[0].competitors[1].team.$ref
-
-  getHomeTeam(homeTeamUrl)
-  getAwayTeam(awayTeamUrl)
+  
+  getHomeTeam(`https://${homeTeamUrl.split('://')[1]}`)
+  getAwayTeam(`https://${awayTeamUrl.split('://')[1]}`)
 }
+
+// !CHECKED AND CONVERTED TO HTTPS
 async function getHomeTeam(homeTeamUrl) {
   const response = await fetch(homeTeamUrl)
   const data = await response.json();
@@ -72,6 +65,7 @@ async function getHomeTeam(homeTeamUrl) {
   homeName.textContent = data.shortDisplayName
 }
 
+// !CHECKED AND CONVERTED TO HTTPS
 async function getAwayTeam(awayTeamUrl) {
   const response = await fetch(awayTeamUrl)
   const data = await response.json();
@@ -81,7 +75,6 @@ async function getAwayTeam(awayTeamUrl) {
   awayName.textContent = data.shortDisplayName
 }
 
-// !converts date returned from API to more readable format.
 function convertTimeAndDate(timeAndDate) {
   const inputTime = timeAndDate;
   const parsedDate = new Date(inputTime);
@@ -90,10 +83,10 @@ function convertTimeAndDate(timeAndDate) {
   return parsedDate.toLocaleString('en-US', options);
 }
 
+// !CHECKED - USES HTTPS
 async function getTeams(teamUrl) {
   const response = await fetch(teamUrl);
   const data = await response.json();
-  console.log(data)
   data.sports[0].leagues[0].teams.forEach(team => {
     const teamDiv = document.createElement('div')
     const teamLogo = document.createElement('img')
@@ -106,6 +99,7 @@ async function getTeams(teamUrl) {
   })
 }
 
+// !CHECKED - USES HTTPS
 async function getNews(articleUrl) {
   const response = await fetch(articleUrl);
   const data = await response.json();
@@ -130,6 +124,7 @@ async function getNews(articleUrl) {
     newsSection.appendChild(newsDiv)
   })
 }
+
 function saveGameIndex() {
   localStorage.setItem('gameIndex', eventIndex)
 }
@@ -141,6 +136,7 @@ function getGameIndex() {
     eventIndex = gameIndex
   }
 }
+
 const prevGameBtn = document.querySelector('#prevGameBtn')
 const nextGameBtn = document.querySelector('#nextGameBtn')
 prevGameBtn.addEventListener('click', () => {
@@ -151,13 +147,11 @@ prevGameBtn.addEventListener('click', () => {
     .then(data => {
       let numberOfGames = data.items.length
       eventIndex--
-      console.log(eventIndex)
       if (eventIndex < 0) {
         eventIndex = numberOfGames - 1
-        console.log(eventIndex)
       }
       saveGameIndex()
-      selectNextEvent(eventUrl)
+      getEventList(eventUrl)
     })
 })
 nextGameBtn.addEventListener('click', () => {
@@ -168,16 +162,14 @@ nextGameBtn.addEventListener('click', () => {
     .then(data => {
       let numberOfGames = data.items.length
       eventIndex++
-      console.log(eventIndex)
       if (eventIndex > numberOfGames - 1) {
         eventIndex = 0
-        console.log(eventIndex)
       }
       saveGameIndex()
-      selectNextEvent(eventUrl)
+      getEventList(eventUrl)
     })
 })
 
-selectNextEvent(eventUrl)
+getEventList(eventUrl)
 getTeams(teamUrl)
 getNews(articleUrl)
