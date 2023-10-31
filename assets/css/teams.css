@@ -22,7 +22,7 @@ main h1 {
   margin: 20px;
   text-align: center;
   font-size: 100px;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -237,3 +237,12 @@ main h2 {
   list-style: none;
 }
 
+a{
+  text-decoration: none;
+  color: var(--color30);
+}
+
+#current-date{
+  margin: 10px;
+  font-size: 30px;
+}
