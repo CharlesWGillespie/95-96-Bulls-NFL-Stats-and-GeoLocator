@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./assets/css/teams.css" />
   </head>
   <body>
+    <img class="company-logo" src="./assets/main-logo-white-transparent.png" alt="">
+    <section class="page-background">
     <main>
       <header>
         <nav class="nav nav-color">
@@ -38,30 +40,36 @@
           <div class="head-to-head-img">
             <img id="team-logo" src="" alt="img"/>
           </div>
-          <div div class="game-info">
+          <div class="game-info">
             <p id='team-name'></p>
-            <p id="stadium-name">Stadium:</p>
+            <p id="current-date"></p>
+            <p class="coach-name">Head Coach
+              <p id="coach-name"></p>
             <a id="team-schedule">Schedule</a>
             <a id="team-link" href="">Learn More </a>
           </div>
      </section>
     </section>  
-    <section class="outer-starting-roster-container">
+    <section>
       <section class="starting-roster-container">
-        <h2 class="team-roster-h2">CURRENT ROSTER</h2>
-        <p id="current-date"></p>
-        <p class="coach-name">Head Coach
-        <p id="coach-name"></p>
-        </p>
-        <section id="offense-roster"> <p>Offense</p></section>
-        <section id="defense-roster"> <p>Defense</p></section>
-        <section id="special-teams-roster"> <p>Special Teams</p></section>
-        <ul>
-         <li class="player-roster-li"></li>
-        </ul>
+        <h2 class="team-roster-h2">OFFENSE</h2>
+        <section id="offense-roster"></section>
+      </section>
+    </section>
+    <section>
+      <section class="starting-roster-container">
+        <h2 class="team-roster-h2">DEFENSE</h2>
+        <section id="defense-roster"></section>
+      </section>
+    </section>
+    <section>
+      <section class="starting-roster-container">
+        <h2 class="team-roster-h2">SPECIAL TEAMS</h2>
+        <section id="special-teams-roster"></section>
       </section>
     </section>
   </section>
+</section>
     <script
       src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="

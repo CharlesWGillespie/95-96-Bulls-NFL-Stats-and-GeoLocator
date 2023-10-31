@@ -10,13 +10,29 @@ html {
 body {
   background-color: var(--color60);
   max-width: 100%;
-  border:  2px solid white;
+  
+}
+
+.company-logo {
+  position: absolute;
+  left: -200px;
+  top: -200px;
+  margin: 0;
+  rotate: 30deg;
+  width: 600px;
+  z-index: -1;
+}
+
+.page-background{
+  background-color: var(--color30);
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--color60);
+  border: none;
 }
 
 /* nav bar */
@@ -31,7 +47,7 @@ main {
 .nav ul{
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 ;
   text-align: center;
 }
 .nav li{
@@ -47,6 +63,7 @@ main {
   display: block;
   position: relative;
   padding: 4px 0;
+  color: var(--color30);
 }
 .nav a::before{
   content: "";
@@ -89,6 +106,7 @@ main h1 {
   justify-content: center;
   margin-top: 20px; /*change to 150px after editing head to head container*/
   flex-wrap: wrap;
+  
 }
 
 .suggested-image-box {
@@ -103,11 +121,13 @@ main h1 {
   border: 5px solid var(--color10);
   border-radius: 30px;
   background-color: var();
+  background-color: var(--color60);
 }
 
 .suggested-image-box img {
   max-width: 100%;
   max-height: 100%;
+  
 }
 
 #suggested-team-name{
@@ -134,6 +154,7 @@ main h1 {
 }
 
 .head-to-head-container {
+  background-color: var(--color60);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -202,7 +223,7 @@ justify-content: flex-end;
 .starting-roster-container {
   margin: 5px;
   text-align: center;
-  min-width: 370px;
+  min-width: 330px;
   width: 90%;
   max-width: 510px;
   max-height: 100%;
@@ -213,6 +234,7 @@ justify-content: flex-end;
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--color30);
+  background-color: var(--color60);
 }
 
 .team-roster-h2 {
@@ -236,7 +258,6 @@ a{
 }
 .coach-name{
   margin: 0;
-  text-decoration: underline;
   font-size: 30px;
 }
 
@@ -245,11 +266,6 @@ a{
   font-size: 25px;
 }
 
-#offense-roster p {
-  font-size: 30px;
-  text-decoration: underline;
-  margin: 10px;
-}
 
 #offense-roster h3{ 
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
@@ -258,12 +274,6 @@ a{
     "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 200;
-  margin: 10px;
-}
-
-#defense-roster p{
-  font-size: 30px;
-  text-decoration: underline;
   margin: 10px;
 }
 
@@ -277,11 +287,6 @@ a{
   margin: 10px;
 }
 
-#special-teams-roster p{
-  font-size: 30px;
-  text-decoration: underline;
-  margin: 10px;
-}
 
 #special-teams-roster h3{ 
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
@@ -308,30 +313,18 @@ a{
    height: 220px;
   }
   
-  #offense-roster p {
-    font-size: 40px;
-  }
-  
   #offense-roster h3{ 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
   }
 
-  #defense-roster p{
-    font-size: 40px;
-  }
-  
   #defense-roster h3{ 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
   }
   
-  #special-teams-roster p{
-    font-size: 40px;
-  }
-  
   #special-teams-roster h3{ 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
   }
 
@@ -341,16 +334,60 @@ a{
 }
 
 @media (min-width: 1055px){
-  
+   body{
+    max-width: 100%;
+   }
+
   .main-section-for-team-info{
-    justify-content: start;
+    justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: start;
+    max-width: 1056px;
   }
 
   .outside-head-to-head-container{
     justify-content: left;
+    flex-wrap: wrap;
+
   }
 
+  .head-to-head-container{
+    justify-content: space-around;
+    align-items: start;
+    height: 300px;
+   max-width: 1500px;
+   width: 1030px;
   
+  }
+
+  #team-name{
+    margin: 0;
+    font-size: 35px;
+  }
+  .starting-roster-container{
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .coach-name{
+    font-size: 35px;
+  }
+
+  #coach-name{
+    font-size: 35px;
+  }
+
+  #team-schedule {
+    margin: 5px;
+    font-size: 25px;
+  }
+
+  #team-link{
+    margin: 5px;
+    font-size: 25px;
+  }
+
 }
+
+

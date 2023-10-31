@@ -3,7 +3,7 @@ searchBtn = document.querySelector("#search-btn");
 const teamsUrl =
     "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
 const rosterUrl =
-    "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/19/roster";
+    "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/12/roster";
     
     function fetchTeamData(url) {
         fetch(url).then((response) => {
@@ -19,12 +19,12 @@ const rosterUrl =
     }
     function showTeamData(data){
         console.log(data)
-        const teamOne = data.sports[0].leagues[0].teams[23].team.logos[0].href; 
-        const teamLink = data.sports[0].leagues[0].teams[0].team.links[0].href
-        const teamSchedule = data.sports[0].leagues[0].teams[0].team.links[3].href
-        const teamName = data.sports[0].leagues[0].teams[23].team.displayName
+        const teamOne = data.sports[0].leagues[0].teams[15].team.logos[0].href; 
+        const teamLink = data.sports[0].leagues[0].teams[15].team.links[0].href
+        const teamSchedule = data.sports[0].leagues[0].teams[15].team.links[3].href
+        const teamName = data.sports[0].leagues[0].teams[6].team.displayName
         
-        const currentDay = dayjs().format('MM/DD/YYYY')
+        // const currentDay = dayjs().format('MM/DD/YYYY')
         
         
         const showTeamOne = document.querySelector('#team-logo')
@@ -39,7 +39,7 @@ const rosterUrl =
         showTeamLink.setAttribute('href', teamLink)
         showTeamSchedule.setAttribute('href', teamSchedule)
         
-        currentDayId.textContent = `${currentDay}`
+        // currentDayId.textContent = `${currentDay}`
         showTeamName.textContent = `${teamName}`
         
 }
