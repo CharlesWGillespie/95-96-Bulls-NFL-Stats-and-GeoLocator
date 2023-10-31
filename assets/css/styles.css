@@ -38,7 +38,7 @@ header {
 }
 
 .navBarOptions {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex: 1 0 200;
@@ -63,7 +63,7 @@ header {
   color: var(--color10);
 }
 
-.navigation-button{
+.navigation-button {
   border: 0;
   outline: 0;
   background-color: var(--color10);
@@ -183,7 +183,8 @@ h1 {
   border-radius: 5%;
   padding: var(--padding);
 }
-.event-details a{
+
+.event-details a {
   cursor: pointer;
   width: 100%;
   color: var(--textColor);
@@ -209,7 +210,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   text-shadow: var(--color10) 2px 2px;
 }
 
-.news-section{
+.news-section {
   border: 2px solid var(--color30);
   width: 80%;
   margin: auto;
@@ -217,11 +218,12 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   padding: calc(var(--padding) - 2px);
   border-radius: var(--border-radius5);
 }
+
 .news-section div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   margin-bottom: var(--margin-bottom);
   /* background-color: var(--color30); */
   padding: var(--padding);
@@ -229,27 +231,30 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   margin-bottom: calc(var(--margin) + 10px);
   text-align: center;
 }
+
 .news-section h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 38px;
   text-decoration: underline black
 }
 
 .news-section h3 {
   width: 80%;
-  font-size: 30px;
+  font-size: 28px;
   letter-spacing: -1px;
-  line-height: 23px;
+  line-height: 25px;
   word-spacing: -.5px;
   margin: 0;
   word-break: keep-all;
 }
-.news-section p{
+
+.news-section p {
   margin: 0;
   padding: var(--padding);
   line-height: 30px;
 }
-.news-section a{
+
+.news-section a {
   color: var(--color10);
   cursor: pointer;
   /* margin-bottom: var(--margin-bottom); */
@@ -270,7 +275,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 }
 
 .team-list-section h2 {
-  text-decoration: underline black ;
+  text-decoration: underline black;
   font-size: 30px;
   text-align: center;
   width: fit-content;
@@ -278,6 +283,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   height: fit-content;
   margin-bottom: var(--margin-bottom)
 }
+
 /* .team-list-section a{
   width:90%
 } */
@@ -309,10 +315,6 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
     justify-content: space-between;
   }
 
-  h1 {
-    /* width: 100% */
-  }
-
   .team-list-section h2 {
     width: 100%
   }
@@ -327,10 +329,36 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1410px) {
   body {
     max-width: 1240px;
     margin: auto;
+  }
+  header {
+    margin-bottom: 0;
+    position: relative;
+    rotate: 90deg;
+    left: -660px;
+    top: 650px;
+  }
+  nav {
+    width: 39%;
+    margin-right: auto;
+    background-color: var(--color30);
+    padding: 0 var(--padding);
+    margin-top: 10px;
+    border-radius: var(--border-radius5);
+  }
+
+  .navBarOptions {
+    width: 100%;
+    margin: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .navBarOptions li {
+    rotate: -180deg;
+
   }
 
   main {
@@ -349,7 +377,8 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
     margin: 0;
     height: fit-content
   }
-  .news-section{
+
+  .news-section {
     width: 100%;
   }
 
