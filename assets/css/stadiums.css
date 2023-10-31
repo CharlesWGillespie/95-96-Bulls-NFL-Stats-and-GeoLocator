@@ -24,9 +24,9 @@
   
   .title {
   position: absolute;
-  font-size: 100px;
-  rotate: 45deg;
-  top: 50px;
+  font-size: 50px;
+  rotate: 15deg;
+  top: -10px;
   color: rgba(225, 224, 223, 0.7);
   z-index: -1;
   opacity: 80%;
@@ -42,16 +42,16 @@
     flex: 1 0 200;
     margin: auto;
     padding: var(--padding);
-    margin-top: var(--margin-bottom);
-    /* width: 80% */
+    margin-top: 90px;
+   
   }
   
   .navBarOptions li {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 0 .5em 0 .5em;
     padding: var(--padding);
     border-bottom: 1.5px var(--textColor) solid;
-    /* transition: all 150ms ease-out; */
+   
   }
   
   .navBarOptions li:hover {
@@ -63,25 +63,68 @@
   }
 
 .left-container {
-    margin-top: 400px;
-    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-left: 0px;
     background-color: var(--color30);
-    width: 45%;
-    height: 500px;
+    width: 50%;
+    height: 350px;
     padding: var(--padding);
     border-radius: 5px;
-    align-content: center;
   }
 
   .right-container {
-    margin-top: -520px;
-    margin-left: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-left: 0px;
     background-color: var(--color30);
-    width: 45%;
-    height: 500px;
+    width: 50%;
+    height: 350px;
     padding: var(--padding);
     border-radius: 5px;
-    align-content: center;
+    
   }
+.stadium-info {
+  margin-top: 50px;
+  margin-left: 0px;
+  right: 80px;
+  background-color: var(--color30);
+  width: fit-content;
+  height: fit-content;
+  padding: var(--padding);
+  border-radius: 5px;
+}
+.stadium-img {
+    width: 100%;
+    border-radius: 25px;
+   
+}
+.team-search {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: px;
+    margin-left: 1100px;
+    background-color: var(--color30);
+    width: 30%;
+    height: 350px;
+    padding: var(--padding);
+    border-radius: 5px;
+}
+div.float-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #fff;
+    padding: 20px;
+    height: 500px;
+}
 
- 
+div.float-child {
+    width: 40%;
+    float: left;
+    padding: 20px;
+    border: 2px solid #ffff;
+    height: 400px;
+    margin-left: 120px;
+}
