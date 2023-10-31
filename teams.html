@@ -10,10 +10,7 @@
     <main>
       <h1>TEAMS</h1>
 
-      <form class="main-form">
-        <input placeholder="Search Your Team"  id='user-input' class="form-input" type="text" />
-        <button class="search-btn">Search</button>
-      </form>
+      
       <h2>Suggested</h2>
     </main>
     <section class="suggested-image-container">
@@ -44,8 +41,6 @@
     </section>
 
     <section class="head-to-head-container">
-      <div class="inner-outer-container">
-        <div class="head-to-head-inner-container">
           <div class="head-to-head-img">
             <img
               id="team-logo" 
@@ -53,20 +48,24 @@
               alt="img"
             />
           </div>
-
+        
+          <div div class="game-info">
+            <p id='team-name'>Cardinals</p>
+            <p id="stadium-name">Stadium:</p>
+            <a id="team-schedule">Schedule</a>
+            <a id="team-link" href="">Learn More </a>
           </div>
-        </div>
-        <div div class="game-info">
-          
-          <a id="team-schedule">Schedule</a>
-          <p id="stadium-name"></p>
-          <a id="team-link" href="">Learn More </a>
-        </div>
-      </div>
+      
     </section>
     <section class="starting-roster-container">
-      <h2 class="team-roster-h2">PLAYER ROSTER</h2>
+      <h2 class="team-roster-h2">ROSTER</h2>
       <p id="current-date"></p>
+      <p class="coach-name">Head Coach
+        <p id="coach-name"></p>
+      </p>
+      <section id="offense-roster"> <p>Offense</p></section>
+      <section id="defense-roster"> <p>Defense</p></section>
+      <section id="special-teams-roster"> <p>Special Teams</p></section>
       <ul>
         <li class="player-roster-li"></li>
       </ul>

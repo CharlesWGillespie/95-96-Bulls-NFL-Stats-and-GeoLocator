@@ -29,79 +29,6 @@ main h1 {
   color: var(--color30);
 }
 
-.main-form {
-  width: 95%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.form-input {
-  min-width: 200px;
-  min-height: 55px;
-  text-align: center;
-  font-size: 25px;
-  border-radius: 30px;
-  font-weight: 600;
-  border: 0px;
-  margin: 10px;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-.search-btn {
-  align-items: center;
-  background-color: var(--color10);
-  border: 0;
-  border-radius: 30px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 20px;
-  margin: 10px;
-  max-width: 480px;
-  height: 58px;
-  min-width: 100px;
-  overflow: hidden;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-}
-
-.search-btn:hover,
-.search-btn:focus {
-  background-color: #16437e;
-  color: #ffffff;
-}
-
-.search-btn:active {
-  background: #09223b;
-  color: rgb(255, 255, 255, 0.7);
-}
-
-.search-btn:disabled {
-  cursor: not-allowed;
-  background: rgba(0, 0, 0, 0.08);
-  color: rgba(0, 0, 0, 0.3);
-}
 
 main h2 {
   text-align: center;
@@ -113,6 +40,8 @@ main h2 {
     "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--color30);
 }
+
+
 
 .suggested-image-container {
   display: flex;
@@ -141,16 +70,10 @@ main h2 {
   max-height: 100%;
 }
 
-.inner-outer-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 .head-to-head-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 700px;
   min-width: 370px;
@@ -162,17 +85,6 @@ main h2 {
   flex-wrap: wrap;
 }
 
-.head-to-head-inner-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 60px;
-  height: 150px;
-  min-width: 360px;
-  width: 90%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 
 .head-to-head-img {
   border-radius: 30px;
@@ -180,27 +92,21 @@ main h2 {
   min-width: 160px;
   height: 160px;
 }
-.in-between-vs {
-  font-size: 30px;
-  margin-top: 20px;
-  padding: 10px;
-  height: 60px;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: var(--color30);
-}
 
 .head-to-head-img img {
-  width: 70%;
-  height: 70%;
+  width: 300px;
+  height: 300px;
 }
 
 .game-info {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content:  space-between;
   margin: 10px;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
+  align-items: center;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -208,15 +114,26 @@ main h2 {
   color: var(--color30);
 }
 
-.game-info p {
+
+.gam-info p {
   margin: 10px;
 }
+
+.game-info a {
+  margin: 10px;
+}
+
+.team-card-info{
+display: flex;
+justify-content: flex-end;
+}
+
 
 .starting-roster-container {
   margin: 4px;
   text-align: center;
   min-width: 370px;
-  height: 400px;
+
   max-height: 100%;
   border: 5px solid var(--color10);
   border-radius: 30px;
@@ -229,8 +146,10 @@ main h2 {
 
 .team-roster-h2 {
   margin: 10px;
-  font-size: 30px;
+  font-size: 50px;
+  font-weight: 500;
   text-align: center;
+  text-decoration: underline;
 }
 
 .player-roster-li {
@@ -238,11 +157,69 @@ main h2 {
 }
 
 a{
-  text-decoration: none;
   color: var(--color30);
 }
 
 #current-date{
   margin: 10px;
   font-size: 30px;
+}
+.coach-name{
+  margin: 0;
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+#coach-name-p{
+  margin: 0;
+  font-size: 25px;
+}
+
+#offense-roster p {
+  font-size: 30px;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+#offense-roster h3{ 
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 10px;
+}
+
+#defense-roster{
+  font-size: 30px;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+#defense-roster h3{ 
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 10px;
+}
+
+#special-teams-roster{
+  font-size: 30px;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+#special-teams-roster h3{ 
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 10px;
+  
 }
