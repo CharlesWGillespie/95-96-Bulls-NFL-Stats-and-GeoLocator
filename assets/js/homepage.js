@@ -91,11 +91,16 @@ async function getTeams(teamUrl) {
     const teamDiv = document.createElement('div')
     const teamLogo = document.createElement('img')
     const teamName = document.createElement('h3')
+    const teamLink = document.createElement('a')
+
+
     teamLogo.setAttribute('src', team.team.logos[0].href)
+    teamLink.appendChild(teamDiv)
+    teamLink.setAttribute('href', `./teams.html?id=${team.team.id}`)
     teamDiv.appendChild(teamLogo)
     teamName.textContent = team.team.name
     teamDiv.appendChild(teamName)
-    teamSection.appendChild(teamDiv)
+    teamSection.appendChild(teamLink)
   })
 }
 
