@@ -1,4 +1,6 @@
-let team = 32;
+const idParameter = window.location.search
+let team
+team = checkForParameter()
 
 const suggestedTeamsURL =
   "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
@@ -86,10 +88,11 @@ function showTeamData(data) {
 }
 
 function fetchRosterData(url) {
+  
   fetch(url).then((response) => {
-    if (!response.ok) {
-      throw new Error("Having trouble loading roster");
-    }
+    // if (!response.ok) {
+    //   throw new Error("Having trouble loading roster");
+    // }
     return response.json().then((data) => {
       const getData = data;
       showRosterData(data);
@@ -161,6 +164,17 @@ function showRosterData(data) {
   });
 }
 
+function checkForParameter() {  
+  if (idParameter) {
+    let teamId = idParameter.split('=')[1]
+    return teamId
+  } else {
+    let teamId = Math.floor(Math.random() * 32)
+    return teamId
+  }
+}
+
+checkForParameter()
 fetchTeamData(teamsUrl);
 fetchRosterData(rosterUrl);
 fetchSuggestedTeamData(suggestedTeamsURL);
