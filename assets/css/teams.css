@@ -3,7 +3,10 @@
   --color30: rgb(171, 171, 177);
   --color10: rgb(234 88 12);
 }
-
+html {
+  display: flex;
+  justify-content: center;
+}
 body {
   background-color: var(--color60);
   max-width: 100%;
@@ -12,12 +15,14 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 main h1 {
+  margin: 20px;
   text-align: center;
   font-size: 100px;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -25,18 +30,19 @@ main h1 {
 }
 
 .main-form {
+  width: 95%;
   display: flex;
   justify-content: center;
   text-align: center;
-
 }
 
 .form-input {
   min-width: 200px;
-  min-height: 65px;
+  min-height: 55px;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 30px;
+  font-weight: 600;
   border: 0px;
   margin: 10px;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
@@ -58,13 +64,13 @@ main h1 {
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 35px;
+  font-size: 20px;
   font-weight: 600;
   justify-content: center;
   line-height: 20px;
-  margin-top: 10px;
+  margin: 10px;
   max-width: 480px;
-  height: 65px;
+  height: 58px;
   min-width: 100px;
   overflow: hidden;
   padding: 0px;
@@ -119,15 +125,15 @@ main h2 {
 
 .suggested-image-box {
   display: flex;
-  width: 100px;
-  height: 100px;
-  margin:5px;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
   padding: 10px;
   border: 5px solid var(--color10);
   border-radius: 30px;
   background-color: var();
-  justify-content: center;
-  align-items: center;
 }
 
 .suggested-image-box img {
@@ -135,12 +141,22 @@ main h2 {
   max-height: 100%;
 }
 
+.inner-outer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .head-to-head-container {
   display: flex;
   justify-content: center;
-  height: 600px;
+  align-items: center;
+  height: 700px;
+  min-width: 370px;
   width: 90%;
-  margin: 30px;
+  margin: 5px;
+  margin-bottom: 10px;
   border: 5px solid var(--color10);
   border-radius: 30px;
   flex-wrap: wrap;
@@ -148,18 +164,25 @@ main h2 {
 
 .head-to-head-inner-container {
   display: flex;
-  margin-top: 50px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+  height: 150px;
+  min-width: 360px;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .head-to-head-img {
   border-radius: 30px;
-  margin: 10px;
-  width: 180px;
-  height: 180px;
+  margin: -10px;
+  min-width: 160px;
+  height: 160px;
 }
 .in-between-vs {
-  font-size: 50px;
-  margin-top: 40px;
+  font-size: 30px;
+  margin-top: 20px;
   padding: 10px;
   height: 60px;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
@@ -170,13 +193,12 @@ main h2 {
 }
 
 .head-to-head-img img {
-  width: 180px;
-  height: 180px;
+  width: 70%;
+  height: 70%;
 }
 
-
-
 .game-info {
+  margin: 10px;
   font-size: 40px;
   text-align: center;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
@@ -186,14 +208,18 @@ main h2 {
   color: var(--color30);
 }
 
+.game-info p {
+  margin: 10px;
+}
+
 .starting-roster-container {
-  width: 90%;
-  margin: 30px;
-  max-height: 100%;
+  margin: 4px;
   text-align: center;
+  min-width: 370px;
+  height: 400px;
+  max-height: 100%;
   border: 5px solid var(--color10);
   border-radius: 30px;
-  height: 400px;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -203,10 +229,20 @@ main h2 {
 
 .team-roster-h2 {
   margin: 10px;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
 }
 
 .player-roster-li {
   list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--color30);
+}
+
+#current-date{
+  margin: 10px;
+  font-size: 30px;
 }
