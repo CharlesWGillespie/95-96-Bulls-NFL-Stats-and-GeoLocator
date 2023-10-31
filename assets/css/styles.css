@@ -38,22 +38,21 @@ header {
 }
 
 .navBarOptions {
-  display: flex;
+  display:flex;
   flex-wrap: wrap;
   justify-content: center;
   flex: 1 0 200;
   margin: auto;
-  padding: var(--padding);
+  width: 80%;
   margin-top: var(--margin-bottom);
-  /* width: 80% */
+  gap: 10px;
+  /* background-color: var(--color30); */
 }
 
 .navBarOptions li {
-  font-size: 1.5em;
-  margin: 0 .5em 0 .5em;
+  font-size: 35px;
   padding: var(--padding);
-  border-bottom: 1.5px var(--textColor) solid;
-  /* transition: all 150ms ease-out; */
+  border-radius: var(--border-radius10);
 }
 
 .navBarOptions li:hover {
@@ -279,14 +278,18 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   height: fit-content;
   margin-bottom: var(--margin-bottom)
 }
-
-.team-list-section div {
+/* .team-list-section a{
+  width:90%
+} */
+.team-list-section a {
   width: 100%;
   border-radius: 5px;
   text-align: center;
   padding: var(--padding);
   background-color: var(--color60);
-  margin-bottom: var(--margin-bottom)
+  margin-bottom: var(--margin-bottom);
+  /* text-decoration: none; */
+  color: var(--textColor)
 }
 
 .team-list-section div img {
@@ -319,7 +322,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
     height: fit-content;
   }
 
-  .team-list-section div {
+  .team-list-section a {
     width: 46%
   }
 }
@@ -333,7 +336,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   main section:first-of-type {
@@ -355,7 +358,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
     margin: 0;
   }
 
-  .team-list-section div {
+  .team-list-section a {
     width: 43%
   }
 }
