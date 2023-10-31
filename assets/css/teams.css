@@ -310,6 +310,11 @@ a{
     font-size: 25px;
   }
 
+  .starting-roster-container {
+    min-width: 495px;
+    width: 495px;
+  }
+
   .suggested-image-box{
    width: 220px;
    height: 220px;
@@ -335,10 +340,33 @@ a{
   }
 }
 
+@media (min-width: 795px){
+  .suggested-image-box{
+    width: 150px;
+   height: 150px;
+  }
+
+.suggested-team-name{
+  margin-top: 160px;
+}
+
+}
+
+
 @media (min-width: 1055px){
    body{
     max-width: 100%;
    }
+
+   .suggested-image-box{
+    width: 220px;
+    height: 220px;
+   }
+
+   .suggested-team-name{
+    margin-top: 210px;
+  }
+  
 
   .main-section-for-team-info{
     justify-content: space-between;
@@ -369,6 +397,7 @@ a{
   }
   .starting-roster-container{
     width: 300px;
+    min-width: 330px;
     max-width: 300px;
   }
 
