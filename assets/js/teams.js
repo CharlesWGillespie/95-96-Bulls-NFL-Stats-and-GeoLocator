@@ -19,9 +19,10 @@ const rosterUrl =
     }
     function showTeamData(data){
         console.log(data)
-        const teamOne = data.sports[0].leagues[0].teams[0].team.logos[0].href; 
+        const teamOne = data.sports[0].leagues[0].teams[23].team.logos[0].href; 
         const teamLink = data.sports[0].leagues[0].teams[0].team.links[0].href
         const teamSchedule = data.sports[0].leagues[0].teams[0].team.links[3].href
+        const teamName = data.sports[0].leagues[0].teams[23].team.displayName
         
         const currentDay = dayjs().format('MM/DD/YYYY')
         
@@ -29,6 +30,7 @@ const rosterUrl =
         const showTeamOne = document.querySelector('#team-logo')
         const showTeamLink= document.querySelector('#team-link')
         const showTeamSchedule = document.querySelector('#team-schedule')
+        const showTeamName = document.querySelector('#team-name')
         
         const currentDayId = document.querySelector('#current-date')
         
@@ -38,6 +40,8 @@ const rosterUrl =
         showTeamSchedule.setAttribute('href', teamSchedule)
         
         currentDayId.textContent = `${currentDay}`
+        showTeamName.textContent = `${teamName}`
+        
 }
 
 function fetchRosterData(url) {
@@ -60,7 +64,7 @@ function fetchRosterData(url) {
  const specialTeansRoster = document.querySelector('#special-teams-roster')
 
 
-function showRosterData(data){
+ function showRosterData(data){
     console.log(data)
     
     const coachFirstName = data.coach[0].firstName;
@@ -76,16 +80,16 @@ function showRosterData(data){
         const playerPOS = item.position.abbreviation
         const playerNUM = item.jersey
         
-        const div = document.createElement('div')
-        const h3 = document.createElement('h3')
+        const offenseDiv = document.createElement('div')
+        const offenseH3 = document.createElement('h3')
         
 
-        div.appendChild(h3)
+        offenseDiv.appendChild(offenseH3)
         
 
-        h3.textContent = `${playerName} #${playerNUM} | ${playerPOS} `
+        offenseH3.textContent = `${playerName} #${playerNUM} | ${playerPOS} `
          
-        offenseRoster.appendChild(div)
+        offenseRoster.appendChild(offenseDiv)
     })
     // defense foreach loop for player data
 
@@ -95,16 +99,16 @@ function showRosterData(data){
         const playerPOS = item.position.abbreviation
         const playerNUM = item.jersey
         
-        const div = document.createElement('div')
-        const h3 = document.createElement('h3')
+        const defenseDiv = document.createElement('div')
+        const defenseH3 = document.createElement('h3')
         
 
-        div.appendChild(h3)
+        defenseDiv.appendChild(defenseH3)
         
 
-        h3.textContent = `${playerName} #${playerNUM} | ${playerPOS} `
+        defenseH3.textContent = `${playerName} #${playerNUM} | ${playerPOS} `
          
-        defenseRoster.appendChild(div)
+        defenseRoster.appendChild(defenseDiv)
     })
     // special teams foreach loop for player data
     data.athletes[1].items.forEach((item) =>{ 
@@ -113,16 +117,16 @@ function showRosterData(data){
         const playerPOS = item.position.abbreviation
         const playerNUM = item.jersey
         
-        const div = document.createElement('div')
-        const h3 = document.createElement('h3')
+        const specialTeamsDiv = document.createElement('div')
+        const specialTeamsH3 = document.createElement('h3')
         
 
-        div.appendChild(h3)
+        specialTeamsDiv.appendChild(specialTeamsH3)
         
 
-        h3.textContent = `${playerName} #${playerNUM} | ${playerPOS} `
+        specialTeamsH3.textContent = `${playerName} #${playerNUM} | ${playerPOS} `
          
-        specialTeansRoster.appendChild(div)
+        specialTeansRoster.appendChild(specialTeamsDiv)
     })
 
 }

@@ -8,68 +8,60 @@
   </head>
   <body>
     <main>
-      <h1>TEAMS</h1>
-
-      
-      <h2>Suggested</h2>
+      <header>
+        <nav class="nav nav-color">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./stadiums.html">Stadiums</a></li>
+          </ul>
+        </nav>
+        <h1>TEAMS</h1>
+      </header>
     </main>
     <section class="suggested-image-container">
       <div class="suggested-image-box">
-        <img 
-          src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png"
-          alt="Cardinals"
-        />
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="NFL TEAM"/><p id="suggested-team-name"> Rams</p>
       </div>
       <div class="suggested-image-box">
-        <img
-          src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png"
-          alt="Eagles"
-        />
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="NFL TEAM" /><p id="suggested-team-name"> Bills</p>
       </div>
       <div class="suggested-image-box">
-        <img
-          src="https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png"
-          alt="Commanders"
-        />
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" alt="NFL Team" /><p id="suggested-team-name"> Dolphins</p>
       </div>
       <div class="suggested-image-box">
-        <img
-          src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png"
-          alt="img"
-        />
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="NFL TEAM" /><p id="suggested-team-name">Bengals</p>
       </div>
     </section>
-
-    <section class="head-to-head-container">
+  <section class="main-section-for-team-info">
+    <section class="outside-head-to-head-container">
+      <section class="head-to-head-container">
           <div class="head-to-head-img">
-            <img
-              id="team-logo" 
-              src=""
-              alt="img"
-            />
+            <img id="team-logo" src="" alt="img"/>
           </div>
-        
           <div div class="game-info">
-            <p id='team-name'>Cardinals</p>
+            <p id='team-name'></p>
             <p id="stadium-name">Stadium:</p>
             <a id="team-schedule">Schedule</a>
             <a id="team-link" href="">Learn More </a>
           </div>
-      
-    </section>
-    <section class="starting-roster-container">
-      <h2 class="team-roster-h2">ROSTER</h2>
-      <p id="current-date"></p>
-      <p class="coach-name">Head Coach
+     </section>
+    </section>  
+    <section class="outer-starting-roster-container">
+      <section class="starting-roster-container">
+        <h2 class="team-roster-h2">CURRENT ROSTER</h2>
+        <p id="current-date"></p>
+        <p class="coach-name">Head Coach
         <p id="coach-name"></p>
-      </p>
-      <section id="offense-roster"> <p>Offense</p></section>
-      <section id="defense-roster"> <p>Defense</p></section>
-      <section id="special-teams-roster"> <p>Special Teams</p></section>
-      <ul>
-        <li class="player-roster-li"></li>
-      </ul>
+        </p>
+        <section id="offense-roster"> <p>Offense</p></section>
+        <section id="defense-roster"> <p>Defense</p></section>
+        <section id="special-teams-roster"> <p>Special Teams</p></section>
+        <ul>
+         <li class="player-roster-li"></li>
+        </ul>
+      </section>
     </section>
+  </section>
     <script
       src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
