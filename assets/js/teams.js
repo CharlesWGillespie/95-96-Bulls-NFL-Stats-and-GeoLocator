@@ -19,28 +19,59 @@ const rosterUrl =
     }
     function showTeamData(data){
         console.log(data)
+        //for team data
         const teamOne = data.sports[0].leagues[0].teams[15].team.logos[0].href; 
-        const teamLink = data.sports[0].leagues[0].teams[15].team.links[0].href
-        const teamSchedule = data.sports[0].leagues[0].teams[15].team.links[3].href
-        const teamName = data.sports[0].leagues[0].teams[6].team.displayName
+        const teamLink = data.sports[0].leagues[0].teams[15].team.links[0].href;
+        const teamSchedule = data.sports[0].leagues[0].teams[15].team.links[3].href;
+        const teamName = data.sports[0].leagues[0].teams[15].team.displayName;
         
+        //for suggested section
+        const suggestedOne = data.sports[0].leagues[0].teams[3].team.logos[0].href; 
+        const suggestedOneName = data.sports[0].leagues[0].teams[3].team.nickname;
+        const suggestedTwo = data.sports[0].leagues[0].teams[6].team.logos[0].href; 
+        const suggestedTwoName = data.sports[0].leagues[0].teams[6].team.nickname;
+        const suggestedThree = data.sports[0].leagues[0].teams[18].team.logos[0].href; 
+        const suggestedThreeName = data.sports[0].leagues[0].teams[18].team.nickname;
+        const suggestedFour = data.sports[0].leagues[0].teams[19].team.logos[0].href; 
+        const suggestedFourName = data.sports[0].leagues[0].teams[19].team.nickname;
+
         // const currentDay = dayjs().format('MM/DD/YYYY')
         
-        
+        //target id's for team data
         const showTeamOne = document.querySelector('#team-logo')
         const showTeamLink= document.querySelector('#team-link')
         const showTeamSchedule = document.querySelector('#team-schedule')
         const showTeamName = document.querySelector('#team-name')
+
+        //target suggested img and paragraph
+        const showSuggestedOne = document.querySelector('#suggested-one')
+        const showSuggestedOneName = document.querySelector('#suggested-team-name-one')
+        const showSuggestedTwo = document.querySelector('#suggested-two')
+        const showSuggestedTwoName = document.querySelector('#suggested-team-name-two')
+        const showSuggestedThree = document.querySelector('#suggested-three')
+        const showSuggestedThreeName = document.querySelector('#suggested-team-name-three')
+        const showSuggestedFour = document.querySelector('#suggested-four')
+        const showSuggestedFourName = document.querySelector('#suggested-team-name-four')
+
         
-        const currentDayId = document.querySelector('#current-date')
         
         
         showTeamOne.setAttribute('src', teamOne)
         showTeamLink.setAttribute('href', teamLink)
+
+        //show logo and team name for suggested
         showTeamSchedule.setAttribute('href', teamSchedule)
+        showSuggestedOne.setAttribute('src', suggestedOne)
+        showSuggestedTwo.setAttribute('src', suggestedTwo)
+        showSuggestedThree.setAttribute('src', suggestedThree)
+        showSuggestedFour.setAttribute('src', suggestedFour)
         
-        // currentDayId.textContent = `${currentDay}`
         showTeamName.textContent = `${teamName}`
+        showSuggestedOneName.textContent = `${suggestedOneName}`
+        showSuggestedTwoName.textContent = `${suggestedTwoName}`
+        showSuggestedThreeName.textContent = `${suggestedThreeName}`
+        showSuggestedFourName.textContent = `${suggestedFourName}`
+
         
 }
 

@@ -1,6 +1,7 @@
 :root {
   --color60: rgb(39 39 42);
-  --color30: rgb(205, 205, 207);
+  --color30: rgb(113 113 122);
+  --color20: rgb(221, 221, 221);
   --color10: rgb(234 88 12);
 }
 html {
@@ -10,7 +11,6 @@ html {
 body {
   background-color: var(--color60);
   max-width: 100%;
-  
 }
 
 .company-logo {
@@ -25,6 +25,7 @@ body {
 
 .page-background{
   background-color: var(--color30);
+  border-radius: 20px;
 }
 
 main {
@@ -59,11 +60,10 @@ main {
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  color: var()--color30;
   display: block;
   position: relative;
   padding: 4px 0;
-  color: var(--color30);
+  color: var(--color20);
 }
 .nav a::before{
   content: "";
@@ -72,7 +72,6 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: #fff;
   transition: 0.5s transform ease;
   transform: scale3d(0,1,1);
   transform-origin: 0 50%;
@@ -96,7 +95,7 @@ main h1 {
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: var(--color30);
+  color: var(--color20);
 }
 
 .suggested-image-container {
@@ -106,7 +105,6 @@ main h1 {
   justify-content: center;
   margin-top: 20px; /*change to 150px after editing head to head container*/
   flex-wrap: wrap;
-  
 }
 
 .suggested-image-box {
@@ -130,7 +128,7 @@ main h1 {
   
 }
 
-#suggested-team-name{
+.suggested-team-name{
   position: absolute;
   margin-top: 215px;
   font-size: 30px;
@@ -138,7 +136,7 @@ main h1 {
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Lucida Grande", Helvetica, Arial, sans-serif;
-    color: var(--color30);
+    color: var(--color20);
 }
 
 .main-section-for-team-info{
@@ -194,7 +192,7 @@ main h1 {
     "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: var(--color30);
+  color: var(--color20);
 }
 
 
@@ -242,6 +240,7 @@ justify-content: flex-end;
   font-size: 40px;
   font-weight: 500;
   text-align: center;
+  color: var(--color20);
 }
 
 .player-roster-li {
@@ -249,7 +248,7 @@ justify-content: flex-end;
 }
 
 a{
-  color: var(--color30);
+  color: var(--color20);
 }
 
 #current-date{
@@ -274,6 +273,7 @@ a{
     "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 200;
+  color: var(--color20);
   margin: 10px;
 }
 
@@ -284,6 +284,7 @@ a{
     "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 200;
+  color: var(--color20);
   margin: 10px;
 }
 
@@ -295,6 +296,7 @@ a{
     "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 200;
+  color: var(--color20);
   margin: 10px; 
 }
 
