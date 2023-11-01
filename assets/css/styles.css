@@ -3,7 +3,7 @@
   --color30: rgb(113 113 122);
   --color10: rgb(234 88 12);
   --textColor: rgb(209 213 219);
-  --transition: all 150ms linear;
+  --transition: all 200ms ease-in;
   --margin-bottom: 10px;
   --padding: 10px;
   --border-radius5: 5px;
@@ -24,14 +24,17 @@ body {
 }
 
 .company-logo {
+  display: none;
   position: absolute;
   left: -200px;
   top: -200px;
   margin: 0;
   rotate: 45deg;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   z-index: -1;
   opacity: 20%;
+
 }
 
 header {
@@ -51,8 +54,8 @@ header {
 }
 
 .navBarOptions li {
-  font-size: 35px;
-  padding: var(--padding);
+  font-size: 25px;
+    padding: var(--padding);
   border-radius: var(--border-radius10);
 }
 
@@ -306,11 +309,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 .team-list-section div h3 {
   margin: 0;
 }
-@media (max-width: 550px) {
-  .navBarOptions li{
-    font-size: 20px;
-  }
-}
+
 @media (min-width: 700px) {
   .navBarOptions li {
     font-size: 35px;
@@ -338,6 +337,10 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   body {
     max-width: 1240px;
     margin: auto;
+  }
+
+  .company-logo {
+    display: block;
   }
 
   header {
