@@ -15,6 +15,22 @@
   flex-shrink: 1;
 }
 
+.hidden {
+  animation: gobyby 300ms 1 forwards;
+  /* display: none; */
+}
+@keyframes gobyby {
+  0%{
+    /* scale: .5; */
+  } 50%{
+    transform: translateY(-10%);
+  } 100% {
+    transform: translateY(110%);
+    /* scale: 0; */
+    display: none;
+  }
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--textColor);
@@ -76,6 +92,9 @@ nav {
   color: var(--color10);
   box-shadow: inset 160px 0 0 var(--textColor)
 }
+.navBarOptions li:active{
+  transform: translateX(5px);
+}
 
 .navigation-button {
   border: 0;
@@ -87,6 +106,12 @@ nav {
   padding: var(--padding);
   border-radius: var(--border-radius10);
   cursor: pointer;
+}
+.navigation-button:active {
+  transform: translateX(5px);
+}
+.navigation-button:first-of-type:active{
+  transform: translateX(-5px);
 }
 
 h1 {
@@ -298,9 +323,10 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   margin-bottom: var(--margin-bottom)
 }
 
-/* .team-list-section a{
-  width:90%
-} */
+.team-list-section form {
+  width: 100%
+}
+
 .team-list-section a {
   width: 100%;
   border-radius: 5px;
@@ -318,6 +344,28 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 
 .team-list-section div h3 {
   margin: 0;
+}
+
+.team-search-form {
+  width: 100%;
+  text-align: center;
+}
+
+.team-search-form input {
+  width: 60%;
+  padding: var(--padding);
+  border-radius: var(--border-radius5);
+  margin-bottom: var(--margin-bottom);
+  text-align: center;
+  border: 0;
+  
+}
+.team-search-form input:focus{
+  outline: 2px solid var(--color10);
+}
+
+::placeholder {
+  text-align: center;
 }
 
 @media (min-width: 700px) {

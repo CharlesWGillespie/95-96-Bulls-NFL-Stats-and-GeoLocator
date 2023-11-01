@@ -20,6 +20,9 @@ const articleUrl = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/n
 
 let eventIndex = 0
 
+const teamSearchForm = document.querySelector('#teamSearchForm')
+const searchInput = document.querySelector('#searchInput')
+
 // !CHECKED AND CONVERTED TO HTTPS
 async function getEventList(nextEventUrl) {
 
@@ -50,7 +53,7 @@ async function getNextEventDetails(eventUrl) {
 
   const homeTeamUrl = data.competitions[0].competitors[0].team.$ref
   const awayTeamUrl = data.competitions[0].competitors[1].team.$ref
-  
+
   getHomeTeam(`https://${homeTeamUrl.split('://')[1]}`)
   getAwayTeam(`https://${awayTeamUrl.split('://')[1]}`)
 }
@@ -92,17 +95,41 @@ async function getTeams(teamUrl) {
     const teamLogo = document.createElement('img')
     const teamName = document.createElement('h3')
     const teamLink = document.createElement('a')
-
-
     teamLogo.setAttribute('src', team.team.logos[0].href)
+
     teamLink.appendChild(teamDiv)
     teamLink.setAttribute('href', `./teams.html?id=${team.team.id}`)
+    teamLink.setAttribute('class', 'team-link')
+    teamLink.setAttribute('data-name', team.team.name)
+
+
     teamDiv.appendChild(teamLogo)
-    teamName.textContent = team.team.name
     teamDiv.appendChild(teamName)
     teamSection.appendChild(teamLink)
+    teamName.textContent = team.team.name
+  })
+  // when I search, I need to compare the search value with the teams name
+  const teamListArr = document.querySelectorAll('[data-name]')
+  let searchedTeam;
+
+  searchInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    searchedTeam = searchInput.value
+    searchTeam(teamListArr, searchedTeam)
   })
 }
+
+function searchTeam(teamListArr, searchedTeam) {
+  teamListArr.forEach(team => {
+    if (!team.getAttribute('data-name').toLowerCase().includes(searchedTeam.toLowerCase())){
+      team.classList.add('hidden')
+      console.log('match')
+    } else {
+      team.classList.remove('hidden')
+    }
+  })
+}
+
 
 // !CHECKED - USES HTTPS
 async function getNews(articleUrl) {
@@ -135,7 +162,7 @@ function saveGameIndex() {
 }
 function getGameIndex() {
   const gameIndex = localStorage.getItem('gameIndex')
-  if (localStorage.getItem('gameIndex') === null){
+  if (localStorage.getItem('gameIndex') === null) {
     eventIndex = 0
   } else {
     eventIndex = gameIndex
