@@ -144,7 +144,6 @@ div.float-child {
   
   .dropdown {
     position: relative;
-    display: inline-block;
     float: right;
     display: flex;
     flex-wrap: wrap;
