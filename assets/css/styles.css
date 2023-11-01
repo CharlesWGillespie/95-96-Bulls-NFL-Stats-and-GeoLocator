@@ -3,7 +3,7 @@
   --color30: rgb(113 113 122);
   --color10: rgb(234 88 12);
   --textColor: rgb(209 213 219);
-  --transition: all 200ms ease-in;
+  --transition: all 150ms linear;
   --margin-bottom: 10px;
   --padding: 10px;
   --border-radius5: 5px;
@@ -38,7 +38,13 @@ body {
 }
 
 header {
-  margin-bottom: var(--margin-bottom)
+  margin-bottom: calc(var(--margin-bottom) * 2);
+  margin-top: var(--margin-bottom)
+}
+
+nav {
+  width: 80%;
+  margin: auto
 }
 
 .navBarOptions {
@@ -47,24 +53,28 @@ header {
   justify-content: center;
   flex: 1 0 200;
   margin: auto;
-  width: 80%;
-  margin-top: var(--margin-bottom);
+  width: 100%;
   gap: 10px;
-  /* background-color: var(--color30); */
+  margin-bottom: var(--margin-bottom);
 }
 
-.navBarOptions li {
-  font-size: 25px;
-    padding: var(--padding);
-  border-radius: var(--border-radius10);
+.navBarOptions li a {
+  font-size: 30px;
+  padding: var(--padding);
+  border-radius: var(--border-radius5);
+  text-decoration: none;
+  color: var(--textColor);
+  font-weight: bolder;
+
 }
 
-.navBarOptions li:hover {
+.navBarOptions li a:hover {
   transform: translateY(-5px);
   cursor: pointer;
   border-bottom: 0;
   scale: 120%;
   color: var(--color10);
+  box-shadow: inset 160px 0 0 var(--textColor)
 }
 
 .navigation-button {
@@ -311,8 +321,12 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 }
 
 @media (min-width: 700px) {
+  .navBarOptions {
+    justify-content: start;
+  }
+
   .navBarOptions li {
-    font-size: 35px;
+    font-size: 50px;
   }
 
   .upcoming-game-section {
@@ -333,7 +347,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   }
 }
 
-@media (min-width: 1410px) {
+@media (min-width: 1042px) {
   body {
     max-width: 1240px;
     margin: auto;
@@ -343,33 +357,8 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
     display: block;
   }
 
-  header {
-    margin-bottom: 0;
-    position: relative;
-    rotate: 90deg;
-    left: -660px;
-    top: 650px;
-  }
-
   nav {
-    width: 39%;
-    margin-right: auto;
-    background-color: var(--color30);
-    padding: 0 var(--padding);
-    margin-top: 10px;
-    border-radius: var(--border-radius5);
-  }
-
-  .navBarOptions {
-    width: 100%;
-    margin: auto;
-    margin-right: auto;
-    justify-content: center;
-  }
-
-  .navBarOptions li {
-    rotate: -180deg;
-
+    width: 100%
   }
 
   main {
