@@ -16,17 +16,17 @@
 }
 
 .hidden {
-  animation: gobyby 300ms 1 forwards;
+  animation: gobyebye 300ms 1 forwards;
   /* display: none; */
 }
-@keyframes gobyby {
+@keyframes gobyebye {
   0%{
-    /* scale: .5; */
+    scale: 1;
   } 50%{
     transform: translateY(-10%);
   } 100% {
     transform: translateY(110%);
-    /* scale: 0; */
+    scale: 0;
     display: none;
   }
 }
@@ -352,7 +352,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 }
 
 .team-search-form input {
-  width: 60%;
+  width: 93%;
   padding: var(--padding);
   border-radius: var(--border-radius5);
   margin-bottom: var(--margin-bottom);
@@ -393,6 +393,9 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   .team-list-section a {
     width: 46%
   }
+  /* .team-search-form input{
+    width: 50%
+  } */
 }
 
 @media (min-width: 1042px) {
