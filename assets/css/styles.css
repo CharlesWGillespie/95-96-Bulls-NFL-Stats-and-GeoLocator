@@ -303,6 +303,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   margin: auto;
   align-content: start;
   height: fit-content;
+  min-height: 70vh;
 }
 
 .team-list-section h2 {
@@ -320,7 +321,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 }
 
 .team-list-section a {
-  width: 100%;
+  width: 42%;
   border-radius: 5px;
   text-align: center;
   padding: var(--padding);
@@ -350,7 +351,6 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   margin-bottom: var(--margin-bottom);
   text-align: center;
   border: 0;
-
 }
 
 .team-search-form input:focus {
