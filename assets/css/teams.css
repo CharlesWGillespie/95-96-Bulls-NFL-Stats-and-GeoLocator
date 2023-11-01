@@ -7,11 +7,13 @@
 html {
   display: flex;
   justify-content: center;
+  margin: auto;
+  min-width: 400px;
 }
 body {
   background-color: var(--color60);
   max-width: 100%;
-  margin: auto;
+  min-width: 400px;
 }
 
 .company-logo {
@@ -301,8 +303,17 @@ a{
   margin: 10px; 
 }
 
+
+@media (min-width: 400px){
+  .suggested-team-name{
+    margin-top: 155px;
+  }
+}
 @media (min-width: 535px){
 
+  .suggested-team-name{
+    margin-top: 210px;
+  }
   .coach-name{
     font-size: 40px;
   }
