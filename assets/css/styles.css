@@ -17,9 +17,33 @@
 
 .hidden {
   animation: gobyebye 300ms 1 forwards;
+  -webkit-animation: gobyebye 300ms 1 forwards;
+  -moz-animation: gobyebye 300ms 1 forwards;
   /* display: none; */
 }
 @keyframes gobyebye {
+  0%{
+    scale: 1;
+  } 50%{
+    transform: translateY(-10%);
+  } 100% {
+    transform: translateY(110%);
+    scale: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes gobyebye {
+  0%{
+    scale: 1;
+  } 50%{
+    transform: translateY(-10%);
+  } 100% {
+    transform: translateY(110%);
+    scale: 0;
+    display: none;
+  }
+}
+@-moz-keyframes gobyebye {
   0%{
     scale: 1;
   } 50%{
@@ -310,7 +334,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   border-radius: 5px;
   margin: auto;
   align-content: start;
-  height: fit-content
+  height: fit-content;
 }
 
 .team-list-section h2 {
