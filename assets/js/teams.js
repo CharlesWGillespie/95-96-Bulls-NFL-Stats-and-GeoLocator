@@ -2,8 +2,7 @@ const idParameter = window.location.search
 let team
 team = checkForParameter()
 
-const suggestedTeamsURL =
-  "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
+const suggestedTeamsURL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
 const teamsUrl = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/${team}`;
 const rosterUrl = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/${team}/roster`;
 
