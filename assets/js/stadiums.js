@@ -97,8 +97,7 @@ fetch(teamUrl)
      console.error(error);
    });
 }
-const userInput = "Green Bay Packers";
-getVenueImageByInput(userInput);
+
 
 
 
