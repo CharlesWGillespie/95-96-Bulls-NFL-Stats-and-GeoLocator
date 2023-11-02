@@ -13,6 +13,9 @@ Welcome to the repository containing HTML files and JavaScript code for an engag
 
 ## Screenshots
 
+![Home page](./assets/charleswgillespie.github.io_95-96-Bulls-NFL-Stats-and-GeoLocator_.png)
+![Teams page](./assets/charleswgillespie.github.io_95-96-Bulls-NFL-Stats-and-GeoLocator_teams.html.png)
+![Stadium page](./assets/127.0.0.1_5501_stadiums.html.png)
 
 
 ## HTML Files
