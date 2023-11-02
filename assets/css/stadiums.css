@@ -27,9 +27,9 @@
   font-size: 50px;
   rotate: 15deg;
   top: -10px;
-  color: rgba(225, 224, 223, 0.7);
+  color:#eb4700;
   z-index: -1;
-  opacity: 80%;
+  opacity: 50%;
   }
   header {
     margin-bottom: var(--margin-bottom)
@@ -43,7 +43,6 @@
     padding: var(--padding);
     margin-top: 90px;
     margin-right: px;
-   
   }
   
   .navBarOptions li {
@@ -51,6 +50,7 @@
     margin: 0 .5em 0 .5em;
     padding: var(--padding);
     border-bottom: 1.5px var(--textColor) solid;
+    color: #eb4700;
    
   }
   
@@ -140,7 +140,37 @@ div.float-child {
   display: flex;
   flex-wrap: wrap;
 }
-  
+.searchInput {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 30px; 
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.search {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 30px;
+  flex-grow: 1;
+}
+
+.search-button {
+  background-color: #eb4700;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 55px;
+  cursor: pointer;
+  opacity: 80%;
+}
+
+
+.search-button:hover {
+  background-color: #7c0303;
+}
   
   .search-text {
     display: none;

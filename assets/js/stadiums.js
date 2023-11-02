@@ -56,7 +56,7 @@ fetchStadiumImage (stadiumurl)
    //       teamList.appendChild(listItem);
    //    });
    // }
-const teamUrl = document.getElementsById("https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/12")
+const teamUrl = ("https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/12")
 
 function getVenueImageByInput(userInput) {
 fetch(teamUrl)
@@ -73,6 +73,7 @@ fetch(teamUrl)
       if (userInput.toLowerCase() === teamName.toLowerCase()) {
          console.log(`User input matches the team name: ${teamName}`);
          console.log(`Team ID: ${teamId}`);
+
          const secondApiUrl = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2023/teams/${teamId}`;
          fetch(secondApiUrl)
          .then((response) => {
