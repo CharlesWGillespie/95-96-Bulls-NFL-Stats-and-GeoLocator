@@ -16,43 +16,7 @@
 }
 
 .hidden {
-  animation: gobyebye 300ms 1 forwards;
-  -webkit-animation: gobyebye 300ms 1 forwards;
-  -moz-animation: gobyebye 300ms 1 forwards;
-  /* display: none; */
-}
-@keyframes gobyebye {
-  0%{
-    scale: 1;
-  } 50%{
-    transform: translateY(-10%);
-  } 100% {
-    transform: translateY(110%);
-    scale: 0;
-    display: none;
-  }
-}
-@-webkit-keyframes gobyebye {
-  0%{
-    scale: 1;
-  } 50%{
-    transform: translateY(-10%);
-  } 100% {
-    transform: translateY(110%);
-    scale: 0;
-    display: none;
-  }
-}
-@-moz-keyframes gobyebye {
-  0%{
-    scale: 1;
-  } 50%{
-    transform: translateY(-10%);
-  } 100% {
-    transform: translateY(110%);
-    scale: 0;
-    display: none;
-  }
+  display: none;
 }
 
 body {
@@ -116,7 +80,8 @@ nav {
   color: var(--color10);
   box-shadow: inset 160px 0 0 var(--textColor)
 }
-.navBarOptions li:active{
+
+.navBarOptions li:active {
   transform: translateX(5px);
 }
 
@@ -131,10 +96,12 @@ nav {
   border-radius: var(--border-radius10);
   cursor: pointer;
 }
+
 .navigation-button:active {
   transform: translateX(5px);
 }
-.navigation-button:first-of-type:active{
+
+.navigation-button:first-of-type:active {
   transform: translateX(-5px);
 }
 
@@ -327,6 +294,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  flex-shrink: 1;
   justify-content: space-evenly;
   background-color: var(--color30);
   width: 80%;
@@ -335,6 +303,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   margin: auto;
   align-content: start;
   height: fit-content;
+  min-height: 70vh;
 }
 
 .team-list-section h2 {
@@ -352,7 +321,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 }
 
 .team-list-section a {
-  width: 100%;
+  width: 42%;
   border-radius: 5px;
   text-align: center;
   padding: var(--padding);
@@ -382,9 +351,9 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   margin-bottom: var(--margin-bottom);
   text-align: center;
   border: 0;
-  
 }
-.team-search-form input:focus{
+
+.team-search-form input:focus {
   outline: 2px solid var(--color10);
 }
 
@@ -404,6 +373,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   .upcoming-game-section {
     justify-content: space-between;
   }
+  
 
   .team-list-section h2 {
     width: 100%
@@ -417,6 +387,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   .team-list-section a {
     width: 46%
   }
+
   /* .team-search-form input{
     width: 50%
   } */
@@ -424,7 +395,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 
 @media (min-width: 1042px) {
   body {
-    max-width: 1240px;
+    max-width: 1142px;
     margin: auto;
   }
 
@@ -460,6 +431,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   .team-list-section {
     width: 30%;
     margin: 0;
+    min-height: fit-content;
   }
 
   .team-list-section a {
