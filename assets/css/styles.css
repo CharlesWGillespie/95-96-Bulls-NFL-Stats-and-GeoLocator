@@ -373,6 +373,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   .upcoming-game-section {
     justify-content: space-between;
   }
+  
 
   .team-list-section h2 {
     width: 100%
@@ -394,7 +395,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 
 @media (min-width: 1042px) {
   body {
-    max-width: 1240px;
+    max-width: 1142px;
     margin: auto;
   }
 
@@ -430,6 +431,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   .team-list-section {
     width: 30%;
     margin: 0;
+    min-height: fit-content;
   }
 
   .team-list-section a {
