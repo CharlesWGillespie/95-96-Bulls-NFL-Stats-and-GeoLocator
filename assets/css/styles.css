@@ -264,13 +264,13 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 
 .news-section h2 {
   text-align: center;
-  font-size: 38px;
+  font-size: 35px;
   text-decoration: underline black
 }
 
 
 .news-section h3 {
-  width: 80%;
+  width: 100%;
   font-size: 28px;
   letter-spacing: -1px;
   line-height: 25px;
@@ -361,13 +361,67 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 ::placeholder {
   text-align: center;
 }
+
 @media (max-width: 1042px) {
-.news-section h2.active::after {
-  content: "\2716";
-  position: relative;
-  left: 90px;
-} 
+  .news-section {
+    position: relative
+  }
+
+  .news-section .menu-btn {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 50px
+  }
+
+  .news-section .menu-btn .menu-btn-comp,
+  .news-section .menu-btn::after,
+  .news-section .menu-btn::before {
+    padding: 0;
+    margin: 0;
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    transition: all 200ms ease-in-out;
+    border-radius: 50px;
+  }
+
+  .news-section .closing-news-menu {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 250ms ease-in-out;
+  }
+
+  .news-section .closing-news-menu.active {
+    height: fit-content;
+    padding: var(--padding)
+  }
+
+  .news-section .menu-btn.active {
+    rotate: -90deg;
+  }
+
+  .news-section .menu-btn.active .menu-btn-comp {
+    opacity: 0;
+  }
+
+  .news-section .menu-btn.active::after {
+    rotate: 45deg;
+  }
+
+  .news-section .menu-btn.active::before {
+    rotate: -45deg;
+  }
 }
+
 @media (min-width: 700px) {
   .navBarOptions {
     justify-content: start;
@@ -380,7 +434,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   .upcoming-game-section {
     justify-content: space-between;
   }
-  
+
 
   .team-list-section h2 {
     width: 100%

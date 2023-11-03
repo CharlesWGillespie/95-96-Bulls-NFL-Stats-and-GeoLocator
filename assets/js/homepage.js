@@ -23,6 +23,8 @@ let eventIndex = 0
 const teamSearchForm = document.querySelector('#teamSearchForm')
 const searchInput = document.querySelector('#searchInput')
 
+const menuBtn = document.querySelector('#menuBtn')
+
 // !CHECKED AND CONVERTED TO HTTPS
 async function getEventList(nextEventUrl) {
 
@@ -202,6 +204,11 @@ nextGameBtn.addEventListener('click', () => {
     })
 })
 
-// getEventList(eventUrl)
-// getTeams(teamUrl)
-// getNews(articleUrl)
+menuBtn.addEventListener('click', ()=>{
+  menuBtn.classList.toggle('active')
+  newsSection.classList.toggle('active')
+})
+
+getEventList(eventUrl)
+getTeams(teamUrl)
+getNews(articleUrl)
