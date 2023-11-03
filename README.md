@@ -11,6 +11,10 @@ Welcome to the repository containing HTML files and JavaScript code for an engag
 - [JavaScript Code](#javascript-code)
 - [Contributors](#contributors)
 
+## Links
+- Repo: https://github.com/CharlesWGillespie/95-96-Bulls-NFL-Stats-and-GeoLocator
+- Live page: https://charleswgillespie.github.io/95-96-Bulls-NFL-Stats-and-GeoLocator
+
 ## Screenshots
 
 ![Home page](./assets/charleswgillespie.github.io_95-96-Bulls-NFL-Stats-and-GeoLocator_.png)
