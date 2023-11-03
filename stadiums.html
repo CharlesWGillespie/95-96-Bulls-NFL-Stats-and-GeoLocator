@@ -1,61 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stadiums</title>
-    <link rel="stylesheet" href="assets/css/stadiums.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stadiums</title>
+  <link rel="stylesheet" href="assets/css/stadiums.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/normalize.css">
 </head>
-<body>
-    <h1 class="title">Stadiums</h1>
-    <header>
-      <nav>
-        <div class="searchBar">
-              <form class="">
-                <input type="text">
-                <button>
-                    Search
-                </button>
-              </form>
-          </div>
-        <ul class="navBarOptions">
-          <li><a>Teams</a></li>
-          <li><a>Home</a></li>
-          <li><a>Stadiums</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-    <div class="float-container">
-        <div class="float-child">
-            <h1 class ="">Suggested Stadium</h1>
-            <img Class="stadium-img" src="" alt="">
-        </div>
-        <div class="float-child">
-            <h1 class="">Suggested Stadium</h1>
-            <img Class="stadium-img" src="" alt="">
-        </div>
-    </div>
+<body>
+  <h1 class="title">Stadiums</h1>
+  <header>
+    <nav class="navBar">
+      <ul class="navBarOptions">
+        <li><a href="./index.html" style="color: #ae3602;">Home</a></li>
+        <li><a href="./teams.html" style="color: #ae3602;">Teams</a></li>
+        <li><a href="" style="color: #ae3602;" style="">Stadiums</a></li>
+      </ul>
+      <div class="searchBtn">
+        <form class="search" id="search">
+          <input type="text" class="searchInput" id="searchInput">
+          <button class="search-button">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main>
     <section class="stadium-info">
-        <div class="map-quest">
-        <div class="stadium-img">
-            <h2>Stadium Info</h2>
-            <p>NameofStadium:</p>
-            <p>State:</p>
-            <p>City:</p>
-            <p>Zip-code:</p>
-            <img Class="stadium-img" src="https://a.espncdn.com/i/venues/nfl/day/interior/3933.jpg" alt="">
-        </div>
-            <div class="map-quest">
-                <h2>Map Quest</h2>
-                <img class="map-quest-image" id="location" src="" alt="">
-            </div>
-        </div>
+      <div class="map-quest">
+        <h2>Map Quest</h2>
+        <img class="map-quest-image" id="location">
+      </div>
     </section>
-    </main>
-    <script src="assets/js/stadiums.js"></script>
+  </main>
+  <script src="assets/js/stadiums.js"></script>
 </body>
+
 </html>
