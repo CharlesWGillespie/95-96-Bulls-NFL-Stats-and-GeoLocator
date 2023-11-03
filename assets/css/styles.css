@@ -3,7 +3,7 @@
   --color30: rgb(113 113 122);
   --color10: rgb(234 88 12);
   --textColor: rgb(209 213 219);
-  --transition: all 150ms linear;
+  --transition: all 250ms ease-in-out;
   --margin-bottom: 10px;
   --padding: 10px;
   --border-radius5: 5px;
@@ -268,6 +268,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   text-decoration: underline black
 }
 
+
 .news-section h3 {
   width: 80%;
   font-size: 28px;
@@ -360,7 +361,13 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 ::placeholder {
   text-align: center;
 }
-
+@media (max-width: 1042px) {
+.news-section h2.active::after {
+  content: "\2716";
+  position: relative;
+  left: 90px;
+} 
+}
 @media (min-width: 700px) {
   .navBarOptions {
     justify-content: start;

@@ -202,6 +202,6 @@ nextGameBtn.addEventListener('click', () => {
     })
 })
 
-getEventList(eventUrl)
-getTeams(teamUrl)
-getNews(articleUrl)
+// getEventList(eventUrl)
+// getTeams(teamUrl)
+// getNews(articleUrl)
