@@ -34,6 +34,9 @@
   header {
     margin-bottom: var(--margin-bottom)
   }
+  .navBar {
+    justify-content: center;
+  }
   .navBarOptions {
     display: flex;
     flex-wrap: wrap;
@@ -136,9 +139,11 @@ div.float-child {
 }
 .searchBtn {
   position: relative;
-  float: right;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center
+  ;
+  
 }
 .searchInput {
   display: flex;
@@ -154,6 +159,7 @@ div.float-child {
   padding: 10px;
   border-radius: 30px;
   flex-grow: 1;
+  
 }
 
 .search-button {
