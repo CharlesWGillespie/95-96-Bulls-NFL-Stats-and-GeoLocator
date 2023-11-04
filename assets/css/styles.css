@@ -7,7 +7,8 @@
   --margin-bottom: 10px;
   --padding: 10px;
   --border-radius5: 5px;
-  --border-radius10: 10px
+  --border-radius10: 10px;
+  --header-font-size: 30px
 }
 
 * {
@@ -63,7 +64,7 @@ nav {
 }
 
 .navBarOptions li a {
-  font-size: 30px;
+  font-size: 21px;
   padding: var(--padding);
   border-radius: var(--border-radius5);
   text-decoration: none;
@@ -107,7 +108,7 @@ nav {
 
 h1 {
   text-decoration: underline black;
-  font-size: 30px;
+  font-size: var(--header-font-size);
   text-align: center;
   width: 50%;
   margin: auto;
@@ -264,7 +265,7 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
 
 .news-section h2 {
   text-align: center;
-  font-size: 35px;
+  font-size: var(--header-font-size);
   text-decoration: underline black
 }
 
@@ -304,12 +305,12 @@ body>main>section>div.upcoming-game-section>div.event-details>p.detail-label {
   margin: auto;
   align-content: start;
   height: fit-content;
-  min-height: 70vh;
+  min-height: 98vh;
 }
 
 .team-list-section h2 {
   text-decoration: underline black;
-  font-size: 30px;
+  font-size: var(--header-font-size);
   text-align: center;
   width: fit-content;
   margin: 0;
