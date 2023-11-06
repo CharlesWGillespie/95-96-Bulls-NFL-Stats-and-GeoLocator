@@ -65,27 +65,6 @@
     color: var(--color10);
   }
 
-.left-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--color30);
-    width: 50%;
-    height: fit-content;
-    padding: var(--padding);
-    border-radius: 5px;
-
-  }
-
-  .right-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--color30);
-    width: 50%;
-    height: fit-content;
-    padding: var(--padding);
-    
-    
-  }
   .map-quest {
     display: flex;
     margin-left: 3%;
@@ -138,37 +117,31 @@ div.float-child {
     margin-left: 120px;
 }
 .searchBtn {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center
-  ;
-  
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search {
+  display: flex;
+  flex-grow: 1;
 }
 .searchInput {
-  display: flex;
-  align-items: center;
   background-color: #f0f0f0;
+  border: none;
   border-radius: 30px; 
   padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
-.search {
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 30px;
-  flex-grow: 1;
-  
-}
 
 .search-button {
+  display: flex;
   background-color: #eb4700;
   color: #fff;
   border: none;
   border-radius: 30px;
   padding: 10px 20px;
-  margin-left: 55px;
   cursor: pointer;
   opacity: 80%;
 }

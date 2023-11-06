@@ -93,7 +93,7 @@ fetch(teamUrl)
    .then((data) => {
       let teamId
       data.sports[0].leagues[0].teams.forEach(function(team){
-         if (team.team.name === searchInput.value) {
+         if (team.team.displayName === searchInput.value) {
             teamId = team.team.id
             console.log(teamId)
             searchInput.value = ""
@@ -127,6 +127,28 @@ fetch(teamUrl)
       })
       })
    }
+   fetch (teamUrl)
+      .then(res => res.json())
+      .then(data => {
+         const datalist = document.getElementById('suggestedSearch');
+
+         data.sports.forEach(sport => {
+            sport.leagues.forEach(league => {
+              league.teams.forEach(team => {
+                const option = document.createElement('option');
+                option.value = team.team.displayName;
+                datalist.appendChild(option);
+              });
+            });
+          });
+        });
+     
+      
+      
+      
+      
+      
+      
 
 //       const teamName = data.team.displayName;
 //       if (userInput.toLowerCase() === teamName.toLowerCase()) {
