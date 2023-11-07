@@ -21,6 +21,9 @@ Welcome to the repository containing HTML files and JavaScript code for an engag
 ![Teams page](./assets/charleswgillespie.github.io_95-96-Bulls-NFL-Stats-and-GeoLocator_teams.html.png)
 ![Stadium page](./assets/127.0.0.1_5501_stadiums.html.png)
 
+## Apis used
+Sports API: https://gist.github.com/nntrn/ee26cb2a0716de0947a0a4e9a157bc1c
+MapQuest: https://developer.mapquest.com/documentation/
 
 ## HTML Files
 
